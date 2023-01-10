@@ -1,0 +1,34 @@
+// A Java program to demonstrate
+// working of recursion
+// Your assignment: Currently the code only uses 3 as an input, you must change the code to accept a user input. What this means is you will need to use the scanner utility. 
+import java.util.Scanner;
+class Recurs {
+
+    
+    
+    static void printFun(int test)
+    {
+        if (test < 1)
+            return;
+ 
+        else {
+            System.out.printf("%d ", test);
+ 
+            // Statement 2
+            printFun(test - 1);
+ 
+            System.out.printf("%d ", test);
+            return;
+        }
+    }
+       
+      public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter input");
+        int test = scanner.nextInt();
+        printFun(test);
+        
+    
+    }
+}
+ 
