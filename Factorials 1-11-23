@@ -1,0 +1,28 @@
+
+/**
+ * Will factor numbers
+ * 
+ * Mellor
+ * v 1.0
+ */
+
+class factoring{   //There is no public in front because the user ony has one option: the second block
+
+    int f(int n) {
+    int result;
+    
+    if (n==1){
+        return 1;
+        }else{
+        result = f(n-1) * n;
+        return result;
+    }
+    }
+}
+public class Factorial{
+    public static void main(String[] args){
+        factoring A = new factoring();
+        
+        System.out.println("factorial of 3 is" + A.f(3));
+    }
+}
