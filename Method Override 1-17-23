@@ -1,0 +1,13 @@
+public class BasicEmployee {
+    float basic;
+    public float updateSalary(Number val){
+        return basic+val.floatValue();
+    }
+}
+
+public class BasicPlusCommissionEmployee extends
+        BasicEmployee {
+    @Override
+    public float updateSalary(Number commission){
+        return basic+basic*commision.floatValue();
+    }
