@@ -1,0 +1,75 @@
+/**
+ * Example of abstraction
+ * 
+ * 1/25/2023
+ */
+
+
+abstract class Shape {
+    String color;
+    
+    abstract double area();
+    public abstract String toString();
+    
+    public Shape(String color)
+    {
+        System.out.println("Shape constructor called");
+        this.color = color;
+    }
+    
+    public String getColor() {
+        return color;
+    }
+}
+
+class Circle extends Shape {
+    double radius;
+    
+    public Circle(String color, double radius){
+        //call our shape constructor 
+        super(color);
+        System.out.println("Circle constructor called");
+        this.radius = radius;
+    }
+    
+    @Override double area()
+    {
+        return Math.PI * Math.pow(radius, 2);
+    }
+    
+    @Override public String toString()
+    {
+        return"Circle color is" + super.getColor()+ "and area is: " + area();
+    }
+}
+
+class Rectangle extends Shape{
+    
+    double length;
+    double width;
+    
+    public Rectangle(String color, double lenght, double width){
+        
+        super(color);
+        System.out.println("Rectangle constructor called");
+        this.length = length;
+        this.width = width;
+    }
+    @Override double area() {
+        return length * width;
+    }
+    @Override public String toString()
+    {
+        return"rectangle color is" +super.getColor() + "and area is: " + area();
+    }
+}
+
+public class tests5 {
+    public static void main(String[] args){
+        Shape o = new Circle("Red", 3);
+        Shape r =  new Rectangle("Yellow", 5, 9);
+        
+        System.out.println(o.toString());
+        System.out.println(r.toString());
+    }
+}
