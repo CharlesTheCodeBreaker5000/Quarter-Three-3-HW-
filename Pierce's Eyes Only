@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+class Rectangle2 {
+public static void main()
+
+    {
+        Scanner scnr = new Scanner(System.in);
+        int length;
+        int width;
+        
+        System.out.println("Enter length: ");
+        length = scnr.nextInt();
+        
+        System.out.println("Enter width: ");
+        width = scnr.nextInt();
+        
+        int area = length*width;
+        
+        System.out.println("Area of rectangle = "+area);
+    }
+}
+    
